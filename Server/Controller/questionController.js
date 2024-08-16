@@ -16,8 +16,9 @@ const validate = [
 
 // Function to post questions
 async function postQuestion(req, res) {
+  // Extracts data sent with the HTTP request
   const { title, description, userid } = req.body;
-
+  // Checks if all required fields are present in the request body
   if (!title || !description) {
     return res.status(StatusCodes.BAD_REQUEST).json({
       error: "Bad Request",
@@ -48,10 +49,11 @@ async function postQuestion(req, res) {
 async function allQuestions(req, res) {
   try {
     // Query the database to get all questions with user information
-    const [questions] = await dbConnection.query(
-      `SELECT * FROM questionTable `
-    );
-    console.log(questions);
+   const [questions] =
+     await dbConnection.query(`SELECT q.question_id, q.title, q.description, u.username
+      FROM questionTable q
+      JOIN userTable u ON q.userid = u.userid`);
+   console.log(questions);
 
     // Check if there are no questions found
     if (questions.length === 0) {
@@ -79,8 +81,20 @@ async function allQuestions(req, res) {
 async function singleQuestion(req, res) {
   const questionId = req.params.question_id; // Keep question_id as a string
 
-  const query =
-    "SELECT question_id, title, description, userid FROM questionTable WHERE question_id = ?";
+  const query = `SELECT 
+  q.question_id, 
+  q.title, 
+  q.description, 
+  u.username
+FROM 
+  questionTable q
+JOIN 
+  userTable u
+ON 
+  q.userid = u.userid
+WHERE 
+  q.question_id = ?;
+`;
 
   try {
     const [results] = await dbConnection.query(query, [questionId]);

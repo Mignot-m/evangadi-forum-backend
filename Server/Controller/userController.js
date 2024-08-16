@@ -81,12 +81,13 @@ async function login(req, res) {
     }
     const username = user[0].username;
     const userid = user[0].userid;
+    // Creates a JSON Web Token with the user's username and ID, which expires in 1 day.
     const token = jwt.sign({ username, userid }, process.env.JWT_SECRET, {
       expiresIn: "1d",
     });
     return res
       .status(StatusCodes.OK)
-      .json({ message: "User login successful", token, username,userid });
+      .json({ message: "User login successful", token, username, userid });
   } catch (error) {
     console.log(error.message);
     return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({
@@ -98,8 +99,24 @@ async function login(req, res) {
 
 // check user function
 async function checkUser(req, res) {
-  const username = req.user.username;
-  const userid = req.user.userid;
-  res.status(StatusCodes.OK).json({ message: "valid user", username, userid });
+  // Retrieves and responds with the username and user ID from the request object.
+  try {
+    const { username, userid } = req.user;
+    if (!username || !userid) {
+      // Handle cases where req.user might not have the required properties
+      return res
+        .status(StatusCodes.UNAUTHORIZED)
+        .json({ error: "Unauthorized", message: "User information missing" });
+    }
+    return res
+      .status(StatusCodes.OK)
+      .json({ message: "Valid user", username, userid });
+  } catch (error) {
+    console.log("Error in checkUser:", error.message);
+    return res
+      .status(StatusCodes.UNAUTHORIZED)
+      .json({ error: "Unauthorized", message: "Authentication invalid" });
+  }
 }
-module.exports = { register, login, checkUser };
+
+module.exports = { register,login,checkUser};

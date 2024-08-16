@@ -14,7 +14,7 @@ const authMiddleware = require("./middleware/authMiddleware");
 
 // Import user routes
 const userRoutes = require("./routes/userRoute");
-app.use("/api/users", userRoutes);
+app.use("/api/user", userRoutes);
 
 // Import question routes
 const questionRoute = require("./routes/questionRoute");
@@ -23,6 +23,7 @@ app.use("/api", authMiddleware, questionRoute);
 // Import answer routes
 const answerRoute = require("./routes/answerRoute");
 app.use("/api", authMiddleware, answerRoute);
+
 
 async function start() {
   try {
