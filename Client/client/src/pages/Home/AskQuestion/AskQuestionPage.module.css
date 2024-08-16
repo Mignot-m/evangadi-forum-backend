@@ -1,0 +1,126 @@
+
+* {
+  margin: 0;
+  padding: 0;
+}
+.back {
+  margin-top: 80px;
+  /* background-color: #fafafa; */
+  width: 100vw;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 20px;
+}
+.p {
+  /* margin-bottom: 1rem !important; */
+  margin-left: 25px;
+  font-family: monospace;
+}
+.step {
+  margin-left: 70px;
+  font-size: 30px;
+  font-weight: 50px;
+  margin-bottom: 5px;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  font-family: cursive;
+  font-weight: 100;
+}
+.step .line {
+  /* border: none; Remove the default border */
+  height: 2px; /* Set the height to a smaller value */
+  background-color: rgb(254, 128, 130);
+  /* margin: 20px 0; */
+  width: 200px;
+  /* margin-left: 70px;
+  margin-top: 5px; */
+  margin-bottom: 15px;
+  transition: all 0.5s ease 0s;
+}
+h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--bs-heading-color);
+  font-size: calc(1.3rem + 0.6vw);
+}
+.mx-1 {
+  margin-right: 0.25rem !important;
+  margin-left: 0.25rem !important;
+}
+.icon {
+  margin-right: 5px;
+}
+
+.points {
+  margin-left: 100px;
+}
+.span{
+ text-align: center;
+}
+
+.post {
+  text-align: center;
+  /* font-size: 30px; */
+  font-weight: 400;
+  font-size: calc(1.3rem + 0.6vw);
+}
+.title,
+.detail {
+  width: 90%;
+  padding: 8px;
+  box-sizing: border-box;
+  /* margin-left: 90px; */
+  background-color: white;
+  border-radius: 6px;
+  border-width: 1px;
+  border-style: solid;
+}
+.detail {
+  height: 100px;
+  margin-top: 6px;
+  padding-bottom: 70px;
+  box-sizing: border-box;
+  border: 0.5px solid rgb(53, 53, 94);
+  border-radius: 5px;
+  font-family: monospace;
+}
+.sub {
+  /* padding: 10px 20px;
+  font-size: 16px; */
+  background-color: #0b5ed7;
+  color: white;
+  border-radius: 6px;
+  border: none;
+  width: 180px;
+  height: 40px;
+  padding-bottom:7px;
+}
+.buttonContainer {
+  /* margin-left: 90px; */
+  align-items: center;
+  margin-top: 20px;
+}
+.title {
+  border: 0.5px solid rgb(53, 53, 94);
+  border-radius: 5px;
+  font-family: cursive;
+}
+.question_container{
+width: 80%;
+max-width: 1200px;
+margin: 0 auto;
+padding: 20px;
+border-radius:8px;
+box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+} 
+.error_message {
+  color: #D8000C;
+ background-color: #FFBABA;
+  border: 1px solid #D8000C;
+  padding: 10px;
+  margin: 10px 0; 
+  border-radius: 5px; 
+  font-weight: bold; 
+}

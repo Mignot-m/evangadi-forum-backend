@@ -1,0 +1,45 @@
+.about_container {
+  margin-top: 50px;
+  padding-left: 25px;
+  padding-bottom: 15px;
+  padding-top: 25px;
+}
+ p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+ unicode-bidi: isolate;
+} 
+ .about_container p:first-child {
+  color: rgb(254, 132, 2);
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+  font-weight: bold;
+} 
+.about_container >h2{
+ background: linear-gradient(310deg, #000000, #e33f00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+.about_container button{
+  background-color: rgb(254, 132, 2);
+    border: none;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 15px;
+}
+
+
+@media (min-width: 768) {
+  .about_container {
+    display: flex;
+    width: 50%;
+  }
+} 

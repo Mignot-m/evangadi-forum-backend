@@ -1,0 +1,188 @@
+.register_container{
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 80px;
+  /* margin-bottom: 50px; */
+  background-image: url(https://forum.ibrodev.com/bg-svg-f.svg);
+}
+.login_inner {
+  text-align: center;
+  background-color: white;
+  border-radius: 5px;
+  height: auto;
+  min-height: 450px;
+  padding: 15px 30px 25px;
+  width: 100%;
+  
+}
+
+.Carousel_inner{
+  position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.Carousel_inner h3 {
+  font-size: 1.25rem;
+  font-weight: bolder;
+} 
+h5{
+  font-size: 1.25rem;
+}
+a:link{
+  text-decoration: none;
+  
+}
+span a{
+  color: #fe8402;
+}
+form{
+  margin-top: 30px;
+}
+
+.server_error {
+  color: #ff0000a9;
+  margin-top: 10px;
+  font-size: 15px;
+}
+.from input{
+   position: relative;
+   padding:10px 40px 10px 15px;
+    width: 100%;
+    background-color: inherit;
+    margin-top: 5px;
+     outline: none;
+      box-sizing: border-box;
+    border-radius: 5px;
+    border: 0.5px solid rgb(202, 202, 202);
+}
+.form input:focus {
+  width: 100%; /* Full width of the container */
+  box-sizing: border-box;
+  border: 0.5px solid rgb(202, 202, 202);
+}
+.error_input input {
+  padding: 10px 40px 10px 15px;
+  width: 100%;
+  border-radius: 5px;
+  background-color: #FEE6E6;
+  border: 0.5px solid rgb(202, 202, 202); 
+  outline: none;
+}
+.line{
+  height: 3px;
+  width: 0px;
+  border-radius: 5px;
+  background-color:rgb(218, 96, 96);
+  display: block;
+  transition: .9s width ease-in-out;
+  position: relative;
+  top: -2px;
+   box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+.form input:focus+.line {
+  width: 100%;
+  background-color: rgb(218, 96, 96);
+  margin: 0px;
+  padding: 0px;
+}
+.password{
+  position: relative;
+}
+.forget a{
+  display: block;
+  text-decoration: none;
+  color: rgb(254, 132, 2);
+  text-align: right;
+  margin-top: 15px; 
+}
+.btn button{
+  font-size: 1rem;
+  padding: 5px 10px;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  /* margin-top: 10px; */
+  color: white;
+  background-color: rgb(81, 108, 240);
+
+}
+ .fNlN{
+  display: flex;
+  gap:5px;
+ } 
+.agreement{
+  font-size: 0.9rem;
+  margin-top: 13px;
+}
+.agreement > p {
+  margin-bottom: 2px !important;
+}
+.password_toggle {
+  position: absolute; /* Position the icon absolutely within the parent container */
+  right: 15px; /* Position the icon 10px from the right edge */
+  top: 67%; /* Center the icon vertically within the input field */
+  transform: translateY(-50%); /* Adjust the vertical alignment to the center */
+  cursor: pointer; /* Change the cursor to a pointer to indicate it's clickable */
+  font-size: 1.2rem; /* Adjust the icon size as needed */
+  color: rgb(132, 132, 132); /* Set the icon color */
+}
+.password_toggle:hover {
+  color: rgb(218, 96, 96); /* Set the icon color */
+}
+.password_toggle_error{
+ position: absolute; /* Position the icon absolutely within the parent container */
+  right: 10px; /* Position the icon 10px from the right edge */
+  top: 69%; /* Center the icon vertically within the input field */
+  transform: translateY(-50%); /* Adjust the vertical alignment to the center */
+  cursor: pointer; /* Change the cursor to a pointer to indicate it's clickable */
+  font-size: 20px; /* Adjust the icon size as needed */
+  color: #888; /* Set the icon color */
+}
+.password_toggle_error:hover {
+  color: rgb(218, 96, 96); /* Set the icon color */
+}
+.success_message {
+  padding: 15px;
+  margin: 10px 0;
+  border: 1px solid #4CAF50;
+  background-color: #dff0d8;
+  color: #3c763d;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+}
+
+@media (min-width: 768) {
+  .login_inner_container {
+    max-width: 720px;
+    padding-right: 3rem !important;
+    padding-left: 3rem !important;
+  }
+  .login_inner {
+    width: 90%;
+    margin: 25px auto;
+    
+  }
+  
+}
+
+.from_input input{
+  padding: 10px 15px;
+    width: 100%;
+    margin-top: 1px;
+    border-radius: 5px;
+    border: 0.5px solid rgb(202, 202, 202);
+}
+
+.from_input {
+  position: relative; /* Create a positioning context for the child elements */
+}
+.password_toggle {
+  position: absolute; /* Position the icon absolutely within the parent container */
+  right: 10px; /* Position the icon 10px from the right edge */
+  top: 50%; /* Center the icon vertically within the input field */
+  transform: translateY(-50%); /* Adjust the vertical alignment to the center */
+  cursor: pointer; /* Change the cursor to a pointer to indicate it's clickable */
+  font-size: 20px; /* Adjust the icon size as needed */
+  color: #888; /* Set the icon color */
+}
