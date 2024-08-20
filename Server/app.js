@@ -30,7 +30,7 @@ async function start() {
     const result = await dbConnection.execute("SELECT 'test' ");
     await app.listen(port);
     console.log("Database connection established successfully!");
-    console.log(`Server listening on https://localhost:${port}`);
+    console.log(`Server listening on port ${port}`);
   } catch (error) {
     console.log(error.message);
   }
